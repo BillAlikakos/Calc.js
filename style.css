@@ -23,15 +23,17 @@
 
 #instructions.active
 {
-	margin-right: 12em;
-	max-height: 400px;
+	margin-right: 10em;
+	width: 30em;
+	max-height: 450px;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 }
 
 #instructions.inactive
 {
-	margin-right: 12em;
+	margin-right: 10em;
+	width: 30em;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
