@@ -5,4 +5,6 @@ A calculator implemented in JavaScript. Supports most of the basic arithmetic op
   * Multiplication *
   * Division  /
   * Addition  +
-  * Subtraction  -
+  * Subtraction  -  
+    
+[CodePen demo](https://codepen.io/BlackLodge/pen/MWyMjoZ)
