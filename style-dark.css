@@ -1,0 +1,246 @@
+body
+{
+	background-color:#121212;
+}
+
+.container
+{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	justify-content: center;
+	color: #d4d4d4;
+}
+
+.title
+{
+	text-align:center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	color:#018706; //#d4d4d4
+}
+
+.menuToggle
+{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 1.5em;
+	border: transparent;
+	margin-left: 1.15em;
+	background-color: #121212;
+	color:#018706;
+}
+
+.panel
+{
+	min-width:30em;
+}
+
+#instructions.active
+{
+	width: 30em;
+	margin-right: auto;
+	max-height: 450px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+#instructions.inactive
+{
+	width: 30em;
+	margin-right: auto;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+#instructions ul
+{
+	width: 25em;
+}
+
+.box
+{
+	margin-top:1.75em;
+	margin-bottom:1.75em;
+	margin-right: auto;
+	margin-left: auto;
+	width:100%;
+	min-width:20em;
+	width:20em;
+	text-align:center;
+	border:1px solid #333333;
+	border-radius: 0.75em;
+	max-height: 22.5em;
+}
+
+.title h1
+{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 2em;
+}
+
+#instructions ul
+{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+}
+
+#calculations
+{
+	margin-left: 3.4em;
+	margin-right: 2.45em;
+	margin-bottom: 0.5em;
+	text-align: left;
+	font-size: 0.75em;
+	color: #828281;
+}
+
+#input
+{
+	margin-bottom: 1em;
+	margin-left:1em;
+	margin-right:0.5em;
+	width:65%;
+	line-height:2.5em;
+	background-color:#121212;
+	border-color: #333333;
+	color: #d4d4d4;
+}
+
+#backspace
+{
+	margin-left: 0.2em;
+	line-height:2.5em;
+	background-color: inherit;
+	color:#d4d4d4;
+	border: 1px solid #333333;
+}
+
+#backspace:hover
+{
+	border: 1px solid #4f4f4f;
+	background-color: #333333;
+}
+
+#toggle
+{
+	color:#d4d4d4;
+	margin-left:2.5em;
+	margin-bottom:0.5em;
+	display: flex;
+	line-height: .5em;
+	background-color: inherit;
+	border:transparent;
+}
+
+#keypad
+{
+	margin: 0 auto;
+	width:15%;
+}
+
+#extras td div /*Hidden row styling and transitioning*/
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+#extras.active td div /*Hidden row visibility transitioning*/
+{
+  max-height: 100px;
+  transition: max-height 0.6s;
+}
+
+#keypad button
+{
+	width:4em;
+	height:2.5em;
+	font-size: 0.95em;
+	color:#d4d4d4;
+	border: 1px solid #333333;
+	background-color: inherit;
+	
+}
+
+#keypad button:hover
+{
+	border: 1px solid #4f4f4f;
+	background-color: #333333;
+}
+
+#theme .text
+{
+	margin-top: 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+}
+
+#theme.active
+{
+	width: 30em;
+	margin-left: auto;
+	max-height: 450px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+#theme.inactive
+{
+	width: 30em;
+	margin-left: auto;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.switch 
+{
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 1.25em;
+}
+
+.switch input 
+{ 
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider 
+{
+	border-radius: 4em;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+}
+
+.slider:before 
+{
+	border-radius: 50%;
+	position: absolute;
+	content: "";
+	height: 0.75em;
+	width: 0.75em;
+	left: 0.3em;
+	bottom: 0.3em;
+	background-color: white;
+	transition: 0.4s;
+}
+
+input:checked + .slider 
+{
+	background-color: #2196F3;
+}
+
+input:checked + .slider:before 
+{
+  transform: translateX(0.75em);
+}
