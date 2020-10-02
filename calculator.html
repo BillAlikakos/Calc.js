@@ -3,18 +3,18 @@
 <meta charset="UTF-8">
 	<head>
 	<title>Js Calculator</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" id="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
 	</head>
 	
-	<body>
+	<body onload="getTheme()">
 		<div class="title">
 			<h1>Calc.js</h1>	
 		</div>
 		<section class="container">
-			<div class="instructionsPanel" >
-				<button type="button" class="instructionToggle" id="instrToggle" onclick="toggleInstructions()">↑Instructions</button>
+			<div class="panel" >
+				<button type="button" class="menuToggle" id="instrToggle" onclick="toggleInstructions()">↑Instructions</button>
 				<div id="instructions" class="active">
 					<ul>
 						<li>Most of the basic math operations and expressions are supported:
@@ -59,6 +59,21 @@
 					<tr><td><button onclick="parseInput('1')">1</button></td><td><button onclick="parseInput('2')">2</button></td><td><button onclick="parseInput('3')">3</button></td><td><button onclick="parseInput('+')">+</button></td></tr>
 					<tr><td><button onclick="parseInput('√')">√x</button></td><td><button onclick="parseInput('0')">0</button></td><td><button onclick="parseInput('.')">,</button></td><td><button onclick="prepareCalculations(document.getElementById('input').value)">=</button></td></tr>
 				</table>
+			</div>
+			<div class="panel" >
+				<button type="button" class="menuToggle" id="themeMenuToggle" onclick="toggleThemeMenu()">↑Theme</button>
+				<div id="theme" class="active">
+					<ul>
+						<li>
+							<label class="text">Dark mode</label>
+							<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+							<span class="slider"></span>
+							</label>
+						</li>
+					</ul>
+					
+				</div>
 			</div>
 		</section>
 	</body>
