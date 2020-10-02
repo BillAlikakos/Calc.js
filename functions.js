@@ -638,14 +638,13 @@
 		
 		if(document.getElementById("extras").className==="inactive")
 		{
-			document.getElementById("main").className="expandedBox";//Change container size along with the keypad
 			document.getElementById("extras").className="active";
 			document.getElementById("toggle").innerHTML="Shrink ↑";
 			
 		}
 		else
 		{
-			document.getElementById("extras").className="inactive";//Container class doesn't need to be chnaged as it's minimum height accomodates the keypad
+			document.getElementById("extras").className="inactive";
 			document.getElementById("toggle").innerHTML="Expand ↓";
 		}
 		
@@ -663,5 +662,57 @@
 			document.getElementById("instructions").className="active";
 			document.getElementById("instrToggle").innerHTML="↑Instructions";
 			
+		}
+	}
+	
+	function toggleThemeMenu()//Toggle the theme panel on/off and change button text
+	{
+		if(document.getElementById("theme").className==="active")
+		{	
+			document.getElementById("themeMenuToggle").innerHTML="↓Theme";
+			document.getElementById("theme").className="inactive";		
+		}
+		else
+		{
+			document.getElementById("theme").className="active";
+			document.getElementById("themeMenuToggle").innerHTML="↑Theme";
+			
+		}
+	}
+	
+	function getTheme()//This function runs on window load and determines the theme that will be used
+	{
+		let currentTheme = localStorage.getItem("theme");
+		console.log(currentTheme)
+		if(!currentTheme)
+		{
+			localStorage.setItem("theme","default");//If no theme preference has been stored, store the default one
+		}
+		else
+		{
+			if(currentTheme==="dark")//If the user has selected dark mode, set the toggle switch on
+			{
+				document.getElementById("themeToggle").checked=true;
+			}
+			else
+			{
+				document.getElementById("themeToggle").checked=false;
+			}
+			toggleTheme();
+		}
+	}
+	
+	function toggleTheme()//This function toggles the ui themes
+	{
+		let theme = document.getElementById("stylesheet");
+		if(document.getElementById("themeToggle").checked)//If the toggle switch is enabled
+		{
+			localStorage.setItem("theme","dark");//Store the user's preference 
+			theme.href = "style-dark.css";//Switch to the dark mode style sheet
+		}
+		else
+		{
+			localStorage.setItem("theme","default");
+			theme.href = "style.css";
 		}
 	}
