@@ -29,8 +29,6 @@
 #instructions.active
 {
 	width: 30em;
-	//margin-left: 2.5em;
-	//margin-right: 10em;
 	margin-right: auto;
 	max-height: 450px;
 	overflow: hidden;
@@ -40,8 +38,6 @@
 #instructions.inactive
 {
 	width: 30em;
-	//margin-left: 2.5em;
-	//margin-right: 10em;
 	margin-right: auto;
 	max-height: 0;
 	overflow: hidden;

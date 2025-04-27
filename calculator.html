@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
+<html lang="en">
 	<head>
-	<title>Js Calculator</title>
-	<link rel="stylesheet" id="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
+        <title>Calc.js</title>
+        <link rel="stylesheet" id="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
 	</head>
 	
 	<body onload="getTheme()">
@@ -48,11 +48,11 @@
 				</div>
 			</div>
 			<div id="main" class="box">
-				<p id="calculations">&nbsp;</p> <!-- The inputted calculation will appear here after the result has been calculated-->
-				<input id="input" type="text" onkeydown="checkInput()"><button id="backspace" onclick="backspace()">←</button> <!--onkeyup="checkSymbol()">-->
-				<button id="toggle" onclick="expand()">Expand ↓</button><!-- TODO: Add extra functions and scrolling functionality-->
+				<p id="calculations">&nbsp;</p>
+				<input id="input" type="text" onkeydown="checkInput()"><button id="backspace" onclick="backspace()">←</button>
+				<button id="toggle" onclick="expand()">Expand ↓</button>
 				<table id="keypad">
-					<tr id="extras" class="inactive"><td><div><button onclick="parseInput('(')">(</button></div></td><td><div><button onclick="parseInput(')')">)</button></div></td><td><div><button onclick="parseInput('^')">x<sup>y</button></div></td><td><div><!--<button onclick="parseInput('/')">÷</button></div>--></td></tr>
+					<tr id="extras" class="inactive"><td><div><button onclick="parseInput('(')">(</button></div></td><td><div><button onclick="parseInput(')')">)</button></div></td><td><div><button onclick="parseInput('^')">x<sup>y</button></div></td><td><div></td></tr>
 					<tr><td><button onclick="clearInput()">C</button></td><td><button onclick="parseInput('^2')">x<sup>2</button></td><td><button onclick="parseInput('^3')">x<sup>3</button></td><td><button onclick="parseInput('/')">÷</button></td></tr>
 					<tr><td><button onclick="parseInput('7')">7</button></td><td><button onclick="parseInput('8')">8</button></td><td><button onclick="parseInput('9')">9</button></td><td><button onclick="parseInput('*')">*</button></td></tr>
 					<tr><td><button onclick="parseInput('4')">4</button></td><td><button onclick="parseInput('5')">5</button></td><td><button onclick="parseInput('6')">6</button></td><td><button onclick="parseInput('-')">-</button></td></tr>
@@ -78,5 +78,5 @@
 		</section>
 	</body>
 	
-	<script src="functions.js"></script>
+    <script src="functions.js" defer></script>
 </html>
